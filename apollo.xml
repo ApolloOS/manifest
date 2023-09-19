@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="Apollo"
+          revision="13"
+          fetch="https://github.com/ApolloOS" />
+
+  <remote name="Apollo-gitlab"
+          fetch="https://gitlab.com/ApolloOS"
+          revision="13" />
+        
+  <remote name="BlissRoms"
+          fetch="https://github.com/BlissRoms"
+          revision="typhoon"
+          review="review.blissroms.org" />
+
+  <remote name="BlissRoms-Devices"
+          fetch="https://github.com/BlissRoms-Devices" />
+
+  <remote name="BlissRoms-gitlab"
+          fetch="https://gitlab.com/BlissLabs/BlissRoms"
+          revision="typhoon" />
+  
+  <remote name="BR-x86" 
+          fetch="https://github.com/BlissRoms-x86" />
+
+  <remote name="github"
+          fetch="https://github.com/" />
+
+  <remote name="gitlab"
+          fetch="https://gitlab.com/" />
+
+  <remote  name="arrow"
+           fetch="https://github.com/ArrowOS"
+           review="https://review.arrowos.net/"
+           revision="refs/heads/arrow-13.0" />
+
+  <!-- Remove first some AOSP repos -->
+  <include name="remove.xml" />
+
+  <!-- End Remove AOSP repos -->
+
+  <!-- General Repos -->
+  <project path="manifest" name="manifest" remote="Apollo" />
+  <project path="bionic" name="bionic" remote="Apollo" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="Apollo" />
+  <project path="build/make" name="build" remote="Apollo" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="Apollo" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- External -->
+  <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" revision="refs/tags/android-11.0.0_r45" />
+  <project path="external/roboto-fonts" name="platform_external_roboto-fonts" remote="BlissRoms" />
+  <project path="external/faceunlock" name="external_faceunlock" remote="Apollo-gitlab" />
+  <project path="external/piex" name="platform_external_piex" remote="BlissRoms" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/base" name="frameworks_base" remote="Apollo" />
+  <project path="frameworks/av" name="frameworks_av" remote="Apollo" />
+  <project path="frameworks/native" name="frameworks_native" remote="Apollo" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="Apollo" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="Apollo" />
+
+  <!-- Hardware -->
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="Apollo" />
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="Apollo" />
+  <project path="hardware/ril" name="platform_hardware_ril" remote="BlissRoms" />
+  <project path="hardware/apollo/interfaces" name="hardware_apollo_interfaces" remote="Apollo" />
+  <project path="hardware/lineage/compat" name="platform_hardware_lineage_compat" remote="BlissRoms" />
+
+  <!-- Hardware (Qcom)-->
+  <project path="hardware/qcom/sdm845/display" name="platform_hardware_qcom_sdm845_display" remote="BlissRoms" />
+  <project path="hardware/qcom/sdm845/media" name="platform_hardware_qcom_sdm845_media" remote="BlissRoms" />
+  <project path="hardware/qcom/sm7250/display" name="platform_hardware_qcom_sm7250_display" remote="BlissRoms" />
+  <project path="hardware/qcom/sm7250/media" name="platform_hardware_qcom_sm7250_media" remote="BlissRoms" />
+  <project path="hardware/qcom/sm8150/data/ipacfg-mgr" name="platform_hardware_qcom_sm8150_data_ipacfg-mgr" remote="BlissRoms" >
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom/sm8150/Android.bp" />
+  </project>
+  <project path="hardware/qcom/sm8150/display" name="platform_hardware_qcom_sm8150_display" remote="BlissRoms" />
+  <project path="hardware/qcom/sm8150/media" name="platform_hardware_qcom_sm8150_media" remote="BlissRoms" />
+
+  <!-- Inputmethods -->
+  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="Apollo" />
+
+  <!-- Modules -->
+  <project path="packages/modules/adb" name="platform_packages_modules_adb" remote="BlissRoms" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="Apollo" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="Apollo" />
+
+  <!-- Packages -->
+  <!--project path="packages/apps/SpaceFlight" name="packages_apps_SpaceFlight" remote="Apollo" /-->
+  <project path="packages/apps/ApolloUpdater" name="platform_packages_apps_BlissUpdater" remote="BlissRoms" />
+  <project path="packages/apps/ApolloSystemUI" name="platform_packages_apps_BlissSystemUI" remote="BlissRoms" />
+  <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="Apollo" />
+  <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="Apollo" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="Apollo" />
+  <project path="packages/apps/Etar" name="packages_apps_Etar" remote="Apollo" />
+  <project path="packages/apps/FaceUnlockService" name="packages_apps_FaceUnlockService" remote="Apollo" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="Apollo" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="Apollo" />
+  <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="Apollo" />
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="Apollo" />
+  <project path="packages/apps/ParallelSpace" name="packages_apps_ParallelSpace" remote="Apollo" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="Apollo" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="Apollo" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="Apollo" />
+  <project path="packages/apps/TouchGestures" name="platform_packages_apps_TouchGestures" remote="BlissRoms" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="Apollo" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="Apollo" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="Apollo" />
+
+  <!-- Prebuilts -->
+  <project path="prebuilts/clang/host/linux-x86/clang-r416183b1" name="platform_prebuilts_clang_host_linux-x86_clang-r416183b1" remote="BlissRoms" />
+
+  <!-- Providers -->
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="Apollo" />
+  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="Apollo" />
+
+  <!-- Sepolicy -->
+  <project path="device/qcom/sepolicy_vndr-legacy-um" name="device_qcom_sepolicy_vndr-legacy-um" remote="Apollo" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="Apollo" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="Apollo" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="Apollo" />
+  <project path="device/apollo/sepolicy" name="device_apollo_sepolicy" remote="Apollo" />
+
+  <!-- System -->
+  <project path="system/core" name="platform_system_core" remote="BlissRoms" />
+  <project path="system/extras" name="platform_system_extras" remote="BlissRoms" />
+  <project path="system/keymaster" name="platform_system_keymaster" remote="BlissRoms" />
+  <project path="system/libhwbinder" name="platform_system_libhwbinder" remote="BlissRoms" />
+  <project path="system/media" name="system_media" remote="Apollo" />
+  <project path="system/netd" name="system_netd" remote="Apollo" />
+  <project path="system/security" name="system_security" remote="Apollo" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="Apollo" />
+  <project path="system/tools/mkbootimg" name="platform_system_tools_mkbootimg" remote="BlissRoms" />
+  <project path="system/vold" name="system_vold" remote="Apollo" />
+  <project path="system/update_engine" name="platform_system_update_engine" groups="pdk" remote="BlissRoms" />
+
+  <!-- Vendor -->
+  <project path="vendor/apollo" name="vendor_apollo" remote="Apollo" />
+  <project path="vendor/gapps" name="MindTheGapps/vendor_gapps" remote="gitlab" clone-depth="1" revision="tau" />
+  <project path="vendor/gms" name="platform_vendor_gms" remote="BlissRoms-gitlab" clone-depth="1" revision="typhoon" />
+  <project path="vendor/microg" name="platform_vendor_microg" remote="BlissRoms-gitlab" clone-depth="1" revision="typhoon" />
+  <project path="vendor/overlays" name="platform_vendor_overlays" remote="BlissRoms" />
+  <project path="vendor/prebuilts" name="platform_vendor_prebuilts" remote="BlissRoms-gitlab" clone-depth="1" revision="typhoon" />
+  <project path="vendor/support" name="platform_vendor_support" remote="BlissRoms" />
+</manifest>
