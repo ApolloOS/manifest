@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="Apollo"
+          revision="14"
+          fetch="https://github.com/ApolloOS" />
+
+  <remote name="BlissRoms"
+          fetch="https://github.com/BlissRoms"
+          revision="universe"
+          review="review.blissroms.org" />
+
+  <remote name="BlissRoms-Devices"
+          fetch="https://github.com/BlissRoms-Devices" />
+
+  <remote name="BlissRoms-gitlab"
+          fetch="https://gitlab.com/BlissLabs/BlissRoms"
+          revision="universe" />
+
+  <remote name="BR-x86"
+          fetch="https://github.com/BlissRoms-x86" />
+
+  <remote name="github"
+          fetch="https://github.com/" />
+
+  <remote name="gitlab"
+          fetch="https://gitlab.com/" />
+
+  <!-- Remove first some AOSP repos -->
+  <include name="remove.xml" />
+
+  <!-- End Remove AOSP repos -->
+
+  <!-- General Repos -->
+  <project path="manifest" name="manifest" remote="Apollo" />
+  <project path="bionic" name="bionic" remote="Apollo" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="Apollo" />
+  <project path="build/make" name="build" remote="Apollo">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="Apollo">
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- External -->
+  <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" revision="refs/tags/android-11.0.0_r45" />
+  <project path="external/cronet" name="platform_external_cronet" remote="BlissRoms-gitlab" revision="universe" />
+  <project path="external/gptfdisk" name="platform_external_gptfdisk" groups="pdk" remote="BlissRoms" />
+  <project path="external/mksh" name="platform_external_mksh" groups="pdk" remote="BlissRoms" />
+  <project path="external/tinycompress" name="platform_external_tinycompress" groups="pdk" remote="BlissRoms" />
+  <project path="external/zstd" name="platform_external_zstd" groups="pdk" remote="BlissRoms" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="frameworks_av" remote="Apollo" />
+  <project path="frameworks/base" name="frameworks_base" remote="Apollo" />
+  <project path="frameworks/native" name="frameworks_native" remote="Apollo" />
+
+  <!-- Hardware -->
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="Apollo" />
+  <project path="hardware/apollo/interfaces" name="hardware_apollo_interfaces" remote="Apollo" />
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="Apollo" />
+  <project path="hardware/lineage/compat" name="platform_hardware_lineage_compat" remote="BlissRoms" />
+
+  <!-- Hardware QCOM -->
+  <project path="hardware/qcom-caf/msm8953/display" name="platform_hardware_qcom_display" groups="qcom,msm8953" revision="universe-caf-msm8953" remote="BlissRoms" />
+  <project path="hardware/qcom-caf/sdm660/display" name="platform_hardware_qcom_display" groups="qcom,sdm660" revision="universe-caf-sdm660" remote="BlissRoms" />
+  <project path="hardware/qcom-caf/msm8996/display" name="platform_hardware_qcom_display" groups="qcom,legacy-qcom" revision="universe-caf-msm8996" remote="BlissRoms" />
+  <project path="hardware/qcom-caf/msm8998/display" name="platform_hardware_qcom_display" groups="qcom,legacy-qcom" revision="universe-caf-msm8998" remote="BlissRoms" />
+  <project path="hardware/qcom-caf/sdm845/audio" name="platform_hardware_qcom_audio" groups="qcom,sdm845" remote="BlissRoms" revision="universe-caf-sdm845" />
+  <project path="hardware/qcom-caf/sdm845/display" name="platform_hardware_qcom_display" groups="qcom,sdm845" remote="BlissRoms" revision="universe-caf-sdm845" />
+  <project path="hardware/qcom-caf/sm8150/audio" name="platform_hardware_qcom_audio" groups="qcom,msmnile" remote="BlissRoms" revision="universe-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/display" name="platform_hardware_qcom_display" groups="qcom" remote="BlissRoms" revision="universe-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8250/audio" name="platform_hardware_qcom_audio" groups="qcom,kona" remote="BlissRoms" revision="universe-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8250/display" name="platform_hardware_qcom_display" groups="qcom" remote="BlissRoms" revision="universe-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8350/display" name="platform_hardware_qcom_display" groups="qcom" remote="BlissRoms" revision="universe-caf-sm8350" />
+  <project path="hardware/qcom-caf/sm8450/audio/agm" name="platform_vendor_qcom_opensource_agm" groups="qcom,waipio-vendor" remote="BlissRoms" revision="universe-caf-sm8450" />
+  <project path="hardware/qcom-caf/sm8450/display" name="platform_hardware_qcom_display" groups="qcom" remote="BlissRoms" revision="universe-caf-sm8450" />
+  <project path="hardware/qcom-caf/sm8550/display" name="platform_hardware_qcom_display" groups="qcom" remote="BlissRoms" revision="universe-caf-sm8550" />
+  <project path="hardware/qcom/wlan" name="platform_hardware_qcom_wlan" remote="BlissRoms" />
+
+  <!-- Modules -->
+  <project path="packages/modules/adb" name="platform_packages_modules_adb" remote="BlissRoms" />
+
+  <!-- Prebuilts -->
+  <project path="prebuilts/clang/host/linux-x86/clang-r416183b1" name="platform_prebuilts_clang_host_linux-x86_clang-r416183b1" remote="BlissRoms" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="Apollo" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="Apollo" />
+
+  <!-- Sepolicy -->
+  <project path="device/qcom/sepolicy_vndr-legacy-um" name="device_qcom_sepolicy_vndr" remote="Apollo" revision="14-legacy-um" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="Apollo" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" remote="Apollo" revision="14-legacy-um" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="Apollo" />
+  <project path="device/apollo/sepolicy" name="device_apollo_sepolicy" remote="Apollo" />
+
+  <!-- System -->
+  <project path="system/core" name="platform_system_core" remote="BlissRoms" />
+  <project path="system/extras" name="platform_system_extras" remote="BlissRoms" />
+  <project path="system/libhidl" name="platform_system_libhidl" remote="BlissRoms" />
+  <project path="system/security" name="system_security" remote="Apollo" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="Apollo" />
+  <project path="system/tools/mkbootimg" name="platform_system_tools_mkbootimg" remote="BlissRoms" />
+  <project path="system/vold" name="system_vold" remote="Apollo" /> 
+
+  <!-- QCOM OpenSource -->
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,waipio-vendor" remote="Apollo" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lahaina" revision="14-legacy-um" remote="Apollo" />
+
+  <!-- Vendor -->
+  <project path="vendor/apollo" name="vendor_apollo" remote="Apollo" />
+  <project path="vendor/overlays" name="vendor_overlays" remote="Apollo" />
+  <project path="vendor/support" name="platform_vendor_support" remote="BlissRoms" />
+
+  <!-- Vendor NXP -->
+  <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="vendor_nxp_opensource_packages_apps_Nfc" remote="Apollo" />
+
+</manifest>
