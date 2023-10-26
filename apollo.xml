@@ -92,6 +92,11 @@
   <project path="prebuilts/clang/host/linux-x86/clang-r416183b1" name="platform_prebuilts_clang_host_linux-x86_clang-r416183b1" remote="BlissRoms" />
 
   <!-- Packages -->
+  <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="Apollo" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="Apollo" />
+  <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="Apollo" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="Apollo" />
+  <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="Apollo" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="Apollo" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="Apollo" />
 
