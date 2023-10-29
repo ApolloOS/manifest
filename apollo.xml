@@ -5,6 +5,10 @@
           revision="14"
           fetch="https://github.com/ApolloOS" />
 
+  <remote name="Apollo-gitlab"
+          fetch="https://gitlab.com/ApolloOS"
+          revision="14" />
+
   <remote name="BlissRoms"
           fetch="https://github.com/BlissRoms"
           revision="universe"
@@ -123,6 +127,7 @@
   <!-- Vendor -->
   <project path="vendor/apollo" name="vendor_apollo" remote="Apollo" />
   <project path="vendor/overlays" name="vendor_overlays" remote="Apollo" />
+  <project path="vendor/prebuilts" name="vendor_prebuilts" remote="Apollo-gitlab" />
   <project path="vendor/support" name="platform_vendor_support" remote="BlissRoms" />
 
   <!-- Vendor NXP -->
