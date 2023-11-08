@@ -105,10 +105,11 @@
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="Apollo" />
 
   <!-- Sepolicy -->
-  <project path="device/qcom/sepolicy_vndr-legacy-um" name="device_qcom_sepolicy_vndr" remote="Apollo" revision="14-legacy-um" />
-  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="Apollo" />
-  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" remote="Apollo" revision="14-legacy-um" />
-  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="Apollo" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" groups="qcom,qssi" remote="Apollo"/>
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" groups="qcom,sdm660" remote="Apollo" revision="14-legacy-um" />
+  <project path="device/qcom/sepolicy_vndr/legacy-um" name="device_qcom_sepolicy_vndr" groups="qcom,lahaina" remote="Apollo" revision="14-legacy-um" />
+  <project path="device/qcom/sepolicy_vndr/sm8450" name="platform_device_qcom_sepolicy_vndr" groups="qcom,waipio-vendor" remote="BlissRoms" revision="universe-caf-sm8450" />
+  <project path="device/qcom/sepolicy_vndr/sm8550" name="platform_device_qcom_sepolicy_vndr" groups="qcom,kailua-vendor" remote="BlissRoms" revision="universe-caf-sm8550" />
   <project path="device/apollo/sepolicy" name="device_apollo_sepolicy" remote="Apollo" />
 
   <!-- System -->
