@@ -121,10 +121,6 @@
   <project path="system/tools/mkbootimg" name="platform_system_tools_mkbootimg" remote="BlissRoms" />
   <project path="system/vold" name="system_vold" remote="Apollo" /> 
 
-  <!-- QCOM OpenSource -->
-  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,waipio-vendor" remote="Apollo" />
-  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lahaina" revision="14-legacy-um" remote="Apollo" />
-
   <!-- Vendor -->
   <project path="vendor/apollo" name="vendor_apollo" remote="Apollo" />
   <project path="vendor/overlays" name="vendor_overlays" remote="Apollo" />
