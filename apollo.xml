@@ -105,6 +105,7 @@
   <project path="system/security" name="system_security" remote="Apollo" />
   <project path="system/sepolicy" name="system_sepolicy" remote="Apollo" />
   <project path="system/tools/mkbootimg" name="platform_system_tools_mkbootimg" remote="BlissRoms" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="Apollo" />
   <project path="system/vold" name="system_vold" remote="Apollo" /> 
 
   <!-- Vendor -->
