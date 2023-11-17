@@ -1264,6 +1264,7 @@
 
   <include name="apollo.xml" />
   <include name="los.xml" />
+  <include name="pixel.xml" />
 
 </manifest>
 
