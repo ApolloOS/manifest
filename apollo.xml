@@ -121,6 +121,7 @@
   <project path="vendor/overlays" name="vendor_overlays" remote="Apollo" />
   <project path="vendor/prebuilts" name="vendor_prebuilts" remote="Apollo-gitlab" />
   <project path="vendor/support" name="vendor_support" remote="Apollo" />
+  <project path="vendor/SystemUIClocks" name="platform_vendor_systemuiclocks" remote="BlissRoms-gitlab" clone-depth="1" revision="universe" />
 
   <!-- Vendor NXP -->
   <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="vendor_nxp_opensource_packages_apps_Nfc" remote="Apollo" />
