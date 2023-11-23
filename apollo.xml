@@ -88,6 +88,7 @@
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="Apollo" />
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="Apollo" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="Apollo" />
+  <project path="packages/apps/SpaceStation" name="packages_apps_SpaceStation" remote="Apollo" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="Apollo" />
 
   <!-- Sepolicy -->
@@ -112,7 +113,7 @@
   <project path="vendor/apollo" name="vendor_apollo" remote="Apollo" />
   <project path="vendor/overlays" name="vendor_overlays" remote="Apollo" />
   <project path="vendor/prebuilts" name="vendor_prebuilts" remote="Apollo-gitlab" />
-  <project path="vendor/support" name="platform_vendor_support" remote="BlissRoms" />
+  <project path="vendor/support" name="vendor_support" remote="Apollo" />
 
   <!-- Vendor NXP -->
   <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="vendor_nxp_opensource_packages_apps_Nfc" remote="Apollo" />
