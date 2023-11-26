@@ -1,3 +1,6 @@
+<img src="banner.png">
+<p align="center">
+
 ## ApolloOS
 
 ## Initializing Repository
