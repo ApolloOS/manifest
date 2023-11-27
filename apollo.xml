@@ -97,6 +97,7 @@
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="Apollo" />
   <project path="packages/apps/SpaceStation" name="packages_apps_SpaceStation" remote="Apollo" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="Apollo" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="Apollo" />
 
   <!-- Sepolicy -->
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" groups="qcom,qssi" remote="Apollo"/>
