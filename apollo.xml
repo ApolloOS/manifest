@@ -2,12 +2,12 @@
 <manifest>
 
   <remote name="Apollo"
-          revision="14"
+          revision="14-qpr1"
           fetch="https://github.com/ApolloOS" />
 
   <remote name="Apollo-gitlab"
           fetch="https://gitlab.com/ApolloOS"
-          revision="14" />
+          revision="14-qpr1" />
 
   <remote name="BlissRoms"
           fetch="https://github.com/BlissRoms"
@@ -55,12 +55,12 @@
 
   <!-- External -->
   <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" revision="refs/tags/android-11.0.0_r46" />
-  <project path="external/android-nn-driver" name="platform_external_android-nn-driver" remote="BlissRoms" />
-  <project path="external/cronet" name="platform_external_cronet" remote="BlissRoms-gitlab" revision="universe" />
-  <project path="external/gptfdisk" name="platform_external_gptfdisk" groups="pdk" remote="BlissRoms" />
-  <project path="external/mksh" name="platform_external_mksh" groups="pdk" remote="BlissRoms" />
+  <project path="external/android-nn-driver" name="external_android-nn-driver" remote="Apollo" />
+  <project path="external/cronet" name="external_cronet" remote="Apollo-gitlab" revision="14-qpr1" />
+  <project path="external/gptfdisk" name="external_gptfdisk" groups="pdk" remote="Apollo" />
+  <project path="external/mksh" name="external_mksh" groups="pdk" remote="Apollo" />
   <project path="external/tinycompress" name="platform_external_tinycompress" groups="pdk" remote="BlissRoms" />
-  <project path="external/zstd" name="platform_external_zstd" groups="pdk" remote="BlissRoms" />
+  <project path="external/zstd" name="external_zstd" groups="pdk" remote="Apollo" />
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="frameworks_av" remote="Apollo" />
@@ -75,22 +75,22 @@
   <project path="hardware/lineage/compat" name="platform_hardware_lineage_compat" remote="BlissRoms" />
 
   <!-- Hardware Pixel -->
-  <project path="hardware/google/gchips" name="platform_hardware_google_gchips" remote="BlissRoms" />
-  <project path="hardware/google/graphics/common" name="platform_hardware_google_graphics_common" remote="BlissRoms" />
-  <project path="hardware/google/pixel" name="platform_hardware_google_pixel" remote="BlissRoms" />
-  <project path="hardware/google/pixel-sepolicy" name="platform_hardware_google_pixel-sepolicy" remote="BlissRoms" />
+  <project path="hardware/google/gchips" name="hardware_google_gchips" remote="Apollo" />
+  <project path="hardware/google/graphics/common" name="hardware_google_graphics_common" remote="Apollo" />
+  <project path="hardware/google/pixel" name="hardware_google_pixel" remote="Apollo" />
+  <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" remote="Apollo" />
 
   <!-- Hardware QCOM -->
-  <project path="hardware/qcom/wlan" name="platform_hardware_qcom_wlan" remote="BlissRoms" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="Apollo" />
 
   <!-- Modules -->
-  <project path="packages/modules/adb" name="platform_packages_modules_adb" remote="BlissRoms" />
+  <project path="packages/modules/adb" name="packages_modules_adb" remote="Apollo" />
 
   <!-- Prebuilts -->
   <project path="prebuilts/clang/host/linux-x86/clang-r416183b1" name="platform_prebuilts_clang_host_linux-x86_clang-r416183b1" remote="BlissRoms" />
 
   <!-- Packages -->
-  <project path="packages/apps/ApolloSystemUI" name="packages_apps_ApolloSystemUI" remote="Apollo" />
+  <!--project path="packages/apps/ApolloSystemUI" name="packages_apps_ApolloSystemUI" remote="Apollo" /-->
   <project path="packages/apps/ApolloUpdater" name="packages_apps_ApolloUpdater" remote="Apollo" />
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="Apollo" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="Apollo" />
@@ -102,7 +102,7 @@
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="Apollo" />
   <project path="packages/apps/SpaceStation" name="packages_apps_SpaceStation" remote="Apollo" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="Apollo" />
-  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="Apollo" />
+  <!--project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="Apollo" /-->
 
   <!-- Sepolicy -->
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" groups="qcom,qssi" remote="Apollo"/>
@@ -113,12 +113,12 @@
   <project path="device/apollo/sepolicy" name="device_apollo_sepolicy" remote="Apollo" />
 
   <!-- System -->
-  <project path="system/core" name="platform_system_core" remote="BlissRoms" />
-  <project path="system/extras" name="platform_system_extras" remote="BlissRoms" />
-  <project path="system/libhidl" name="platform_system_libhidl" remote="BlissRoms" />
+  <project path="system/core" name="system_core" remote="Apollo" />
+  <project path="system/extras" name="system_extras" remote="Apollo" />
+  <project path="system/libhidl" name="system_libhidl" remote="Apollo" />
   <project path="system/security" name="system_security" remote="Apollo" />
   <project path="system/sepolicy" name="system_sepolicy" remote="Apollo" />
-  <project path="system/tools/mkbootimg" name="platform_system_tools_mkbootimg" remote="BlissRoms" />
+  <project path="system/tools/mkbootimg" name="system_tools_mkbootimg" remote="Apollo" />
   <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="Apollo" />
   <project path="system/vold" name="system_vold" remote="Apollo" /> 
 
@@ -128,7 +128,7 @@
   <project path="vendor/overlays" name="vendor_overlays" remote="Apollo" />
   <project path="vendor/prebuilts" name="vendor_prebuilts" remote="Apollo-gitlab" />
   <project path="vendor/support" name="vendor_support" remote="Apollo" />
-  <project path="vendor/SystemUIClocks" name="platform_vendor_systemuiclocks" remote="BlissRoms-gitlab" clone-depth="1" revision="universe" />
+  <!--project path="vendor/SystemUIClocks" name="platform_vendor_systemuiclocks" remote="BlissRoms-gitlab" clone-depth="1" revision="universe" /-->
 
   <!-- Vendor NXP -->
   <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="vendor_nxp_opensource_packages_apps_Nfc" remote="Apollo" />

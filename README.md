@@ -7,7 +7,7 @@
 
 **Repo initialization**
 
-    repo init -u https://github.com/ApolloOS/manifest.git -b 14 --git-lfs
+    repo init -u https://github.com/ApolloOS/manifest.git -b 14-qpr1 --git-lfs
 
 **Sync repo**
 
@@ -15,7 +15,7 @@
 
 ## Options
 
-	APOLLO_BUILD_VARIANT - (vanilla, gapps, pixelgapps, foss, microg) - We currently use this to specify what type of extra apps and services to include in the build. 
+	APOLLO_BUILD_VARIANT - (vanilla, gapps, foss, microg) - We currently use this to specify what type of extra apps and services to include in the build. 
 ***Note: Default APOLLO_BUILD_VARIANT is VANILLA.***
 
 ## Building
