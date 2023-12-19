@@ -128,7 +128,7 @@
   <project path="vendor/overlays" name="vendor_overlays" remote="Apollo" />
   <project path="vendor/prebuilts" name="vendor_prebuilts" remote="Apollo-gitlab" />
   <project path="vendor/support" name="vendor_support" remote="Apollo" />
-  <!--project path="vendor/SystemUIClocks" name="platform_vendor_systemuiclocks" remote="BlissRoms-gitlab" clone-depth="1" revision="universe" /-->
+  <project path="vendor/SystemUIClocks" name="vendor_systemuiclocks" remote="Apollo-gitlab" clone-depth="1" revision="14-qpr1" />
   <project path="vendor/certification" name="vendor_certification" remote="Apollo-gitlab" />
 
   <!-- Vendor NXP -->
