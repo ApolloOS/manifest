@@ -90,7 +90,7 @@
   <project path="prebuilts/clang/host/linux-x86/clang-r416183b1" name="platform_prebuilts_clang_host_linux-x86_clang-r416183b1" remote="BlissRoms" />
 
   <!-- Packages -->
-  <!--project path="packages/apps/ApolloSystemUI" name="packages_apps_ApolloSystemUI" remote="Apollo" /-->
+  <project path="packages/apps/ApolloSystemUI" name="packages_apps_ApolloSystemUI" remote="Apollo" />
   <project path="packages/apps/ApolloUpdater" name="packages_apps_ApolloUpdater" remote="Apollo" />
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="Apollo" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="Apollo" />
@@ -98,6 +98,7 @@
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="Apollo" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="Apollo" />
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="Apollo" />
+  <project path="packages/apps/ParallelSpace" name="packages_apps_ParallelSpace" remote="Apollo" />
   <project path="packages/apps/ParanoidSense" name="packages_apps_paranoidsense" remote="Apollo-gitlab" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="Apollo" />
   <project path="packages/apps/SpaceStation" name="packages_apps_SpaceStation" remote="Apollo" />
