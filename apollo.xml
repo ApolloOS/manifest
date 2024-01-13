@@ -67,6 +67,8 @@
   <project path="frameworks/base" name="frameworks_base" remote="Apollo" />
   <project path="frameworks/native" name="frameworks_native" remote="Apollo" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="Apollo" />
+  <project path="frameworks/opt/colorpicker" name="frameworks_opt_colorpicker" remote="Apollo" />
+  <project path="frameworks/opt/timezonepicker" name="frameworks_opt_timezonepicker" remote="Apollo" />
 
   <!-- Hardware -->
   <project path="hardware/libhardware" name="hardware_libhardware" remote="Apollo" />
@@ -95,6 +97,7 @@
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="Apollo" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="Apollo" />
   <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="Apollo" />
+  <project path="packages/apps/Etar" name="packages_apps_Etar" remote="Apollo" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="Apollo" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="Apollo" />
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="Apollo" />
@@ -103,6 +106,7 @@
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="Apollo" />
   <project path="packages/apps/SpaceStation" name="packages_apps_SpaceStation" remote="Apollo" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="Apollo" />
+  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="Apollo" />
   <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="Apollo" />
 
   <!-- Sepolicy -->

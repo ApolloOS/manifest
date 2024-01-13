@@ -88,6 +88,8 @@
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/frameworks/native" />
   <remove-project name="platform/frameworks/libs/systemui" />
+  <remove-project name="platform/frameworks/opt/colorpicker" />
+  <remove-project name="platform/frameworks/opt/timezonepicker" />
 
   <!-- Hardware -->
   <remove-project name="platform/hardware/libhardware" />
@@ -104,6 +106,7 @@
   <remove-project name="platform/packages/modules/adb"/>
 
   <!-- Packages -->
+  <remove-project name="platform/packages/apps/Calendar" />
   <remove-project name="platform/packages/apps/Camera2" />
   <remove-project name="platform/packages/apps/Contacts" />
   <remove-project name="platform/packages/apps/DeskClock" />
@@ -113,6 +116,7 @@
   <remove-project name="platform/packages/apps/Messaging" />
   <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/packages/apps/ThemePicker" />
+  <remove-project name="platform/packages/inputmethods/LatinIME" />
 
   <!-- System -->
   <remove-project name="platform/system/core" />
