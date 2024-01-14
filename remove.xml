@@ -104,6 +104,7 @@
 
   <!-- Modules -->
   <remove-project name="platform/packages/modules/adb"/>
+  <remove-project name="platform/packages/modules/Connectivity"/>
 
   <!-- Packages -->
   <remove-project name="platform/packages/apps/Calendar" />
