@@ -69,6 +69,7 @@
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="Apollo" />
   <project path="frameworks/opt/colorpicker" name="frameworks_opt_colorpicker" remote="Apollo" />
   <project path="frameworks/opt/timezonepicker" name="frameworks_opt_timezonepicker" remote="Apollo" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="Apollo" />
 
   <!-- Hardware -->
   <project path="hardware/libhardware" name="hardware_libhardware" remote="Apollo" />
@@ -88,6 +89,7 @@
   <!-- Modules -->
   <project path="packages/modules/adb" name="packages_modules_adb" remote="Apollo" />
   <project path="packages/modules/Connectivity" name="packages_modules_connectivity" remote="Apollo-gitlab" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="Apollo" groups="pdk" />
 
   <!-- Prebuilts -->
   <project path="prebuilts/clang/host/linux-x86/clang-r416183b1" name="platform_prebuilts_clang_host_linux-x86_clang-r416183b1" remote="BlissRoms" />
@@ -119,6 +121,7 @@
   <project path="device/apollo/sepolicy" name="device_apollo_sepolicy" remote="Apollo" />
 
   <!-- System -->
+  <project path="system/bpf" name="system_bpf" remote="Apollo" />
   <project path="system/core" name="system_core" remote="Apollo" />
   <project path="system/extras" name="system_extras" remote="Apollo" />
   <project path="system/libhidl" name="system_libhidl" remote="Apollo" />
