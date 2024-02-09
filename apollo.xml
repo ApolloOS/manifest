@@ -134,6 +134,9 @@
   <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="Apollo" />
   <project path="system/vold" name="system_vold" remote="Apollo" /> 
 
+  <!-- Tools -->
+  <project path="apollo/scripts" name="scripts" remote="Apollo" />
+
   <!-- Vendor -->
   <project path="vendor/apollo" name="vendor_apollo" remote="Apollo" />
   <project path="vendor/gapps" name="platform_vendor_gapps" remote="BlissRoms-gitlab" clone-depth="1" revision="universe" />
