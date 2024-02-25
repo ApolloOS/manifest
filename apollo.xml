@@ -113,6 +113,8 @@
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="Apollo" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="Apollo" />
   <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="Apollo" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="Apollo" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="Apollo" />
 
   <!-- Sepolicy -->
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" groups="qcom,qssi" remote="Apollo"/>
