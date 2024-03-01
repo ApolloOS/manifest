@@ -100,6 +100,7 @@
   <project path="packages/apps/ApolloSystemUI" name="packages_apps_ApolloSystemUI" remote="Apollo" />
   <project path="packages/apps/ApolloUpdater" name="packages_apps_ApolloUpdater" remote="Apollo" />
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="Apollo" />
+  <project path="packages/apps/Covers" name="packages_apps_Covers" remote="Apollo" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="Apollo" />
   <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="Apollo" />
   <project path="packages/apps/Etar" name="packages_apps_Etar" remote="Apollo" />
