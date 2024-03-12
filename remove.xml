@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Core -->
+  <remove-project name="platform/bionic" />
+  <remove-project name="platform/bootable/recovery" />
+  <remove-project name="platform/build" />
+  <remove-project name="platform/build/soong" />
+
+  <!-- External -->
+  <remove-project name="platform/external/gptfdisk" />
+  <remove-project name="platform/external/libnl" />
+  <remove-project name="platform/external/libcxx" />
+  <remove-project name="platform/external/mksh" />
+  <remove-project name="platform/external/tinycompress" />
+  <remove-project name="platform/external/zstd" />
+
+  <!-- Frameworks -->
+  <remove-project name="platform/frameworks/native" />
+
+  <!-- Hardware -->
+  <remove-project name="platform/hardware/libhardware" />
+  <remove-project name="platform/hardware/interfaces" />
+  <remove-project name="platform/hardware/google/gchips" />
+  <remove-project name="platform/hardware/google/graphics/common" />
+  <remove-project name="platform/hardware/google/pixel" />
+  <remove-project name="platform/hardware/google/pixel-sepolicy" />
+
+  <!-- Hardware (QCOM) -->
+  <remove-project name="platform/hardware/qcom/audio" />
+  <remove-project name="platform/hardware/qcom/camera" />
+  <remove-project name="platform/hardware/qcom/display" />
+  <remove-project name="platform/hardware/qcom/gps" />
+  <remove-project name="platform/hardware/qcom/media" />
+  <remove-project name="platform/hardware/qcom/data/ipacfg-mgr" />
+  <remove-project name="platform/hardware/qcom/wlan" />
+  <remove-project name="platform/hardware/qcom/sm8150/display" />
+  <remove-project name="platform/hardware/qcom/sm8150/media" />
+  <remove-project name="platform/hardware/qcom/sm7250/display" />
+  <remove-project name="platform/hardware/qcom/sm7250/gps" />
+  <remove-project name="platform/hardware/qcom/sm7250/media" />
+
+  <!-- Kernel -->
+  <remove-project name="kernel/configs" />
+
+  <!-- System -->
+  <remove-project name="platform/system/bpf" />
+  <remove-project name="platform/system/core" />
+  <remove-project name="platform/system/extras" />
+  <remove-project name="platform/system/libhidl" />
+  <remove-project name="platform/system/security" />
+  <remove-project name="platform/system/sepolicy" />
+  <remove-project name="platform/system/tools/mkbootimg" />
+  <remove-project name="platform/system/update_engine" />
+  <remove-project name="platform/system/vold" />
+
+</manifest>
